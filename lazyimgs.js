@@ -9,7 +9,7 @@
 	var fn = function() {
 		if ( typeof(imgs) === "object" ){
 			for ( var i = 0, n = imgs.length; i < n; i++ ) {
-				if ( imgs[i].offsetTop < ((w.innerHeight||d.documentElement.clientHeight) + (w.scrollY||d.documentElement.scrollTop) ) && typeof(imgs[i].getAttribute("data-src")) === "string" ) {
+				if ( imgs[i].offsetTop < (parseInt(w.innerHeight||d.documentElement.clientHeight) + parseInt(w.scrollY||d.documentElement.scrollTop) ) && typeof(imgs[i].getAttribute("data-src")) === "string" ) {
 					if ( imgs[i].getAttribute("data-src") != imgs[i].getAttribute("src") ) {
 						imgs[i].setAttribute("src",imgs[i].getAttribute("data-src").length > 0 ? imgs[i].getAttribute("data-src") : imgs[i].getAttribute("src"));
 					}
